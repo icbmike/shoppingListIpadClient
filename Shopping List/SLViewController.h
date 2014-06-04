@@ -8,6 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SLViewController : UIViewController
+@interface SLViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate>
+{
+
+IBOutlet UIBarButtonItem * addButton;
+IBOutlet UIBarButtonItem * trashButton;
+
+}
+- (IBAction)refreshShoppingList:(UIRefreshControl *)refreshControl;
+- (IBAction)addItem:(UIBarButtonItem *)button;
+- (IBAction)deleteList:(UIBarButtonItem *)button;
+
 
 @end
